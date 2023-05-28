@@ -2,6 +2,14 @@ public class Radiostation {
     private int currentRadiostation;
     private int currentVolume;
 
+    public void next(){
+        if(currentRadiostation!=9){
+            currentRadiostation++;
+        }else {
+            currentRadiostation = 0;
+        }
+    }
+
     public int getCurrentRadiostation(){
         return currentRadiostation;
     }
