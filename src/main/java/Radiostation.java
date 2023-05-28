@@ -57,7 +57,7 @@ public class Radiostation {
         if (currentVolume != 0) {
             currentVolume--;
         } else {
-            currentVolume =0;
+            currentVolume = 0;
         }
 
     }
