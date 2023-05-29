@@ -248,5 +248,25 @@ public class RadiostationTest {
 
     }
 
+    @Test
+    public void showCurrentBelowBorderVolume() {
+        Radiostation radio = new Radiostation();
+        radio.setCurrentVolume(-1);
+        radio.decreaseVolume();
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
 
+
+    }
+
+    @Test
+    public void showCurrentAboveBorderVolume() {
+        Radiostation radio = new Radiostation();
+        radio.setCurrentVolume(101);
+        radio.decreaseVolume();
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
 }
