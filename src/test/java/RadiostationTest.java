@@ -269,4 +269,22 @@ public class RadiostationTest {
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void quantityRadiostation() {
+        Radiostation radio = new Radiostation(20);
+        radio.getMaxRadiostation();
+        int expected = 19;
+
+        Assertions.assertEquals(expected,radio.getMaxRadiostation());
+    }
+    @Test
+    public void minRadiostation() {
+        Radiostation radio = new Radiostation(10);
+        radio.getMinRadiostation();
+        int expected = 0;
+
+        Assertions.assertEquals(expected,radio.getMinRadiostation());
+    }
+
 }
+
